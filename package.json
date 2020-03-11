@@ -1,0 +1,65 @@
+{
+  "name": "ts-jest-error-import-from-index-export-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "build": "npm-run-all clean tsc",
+    "build:dev": "npm-run-all clean tsc:dev",
+    "start": "node .",
+    "start:dev": "node --inspect=0.0.0.0 .",
+    "dev:start": "npm-run-all build:dev start:dev",
+    "dev": "nodemon --watch src -e ts,pug,js,css --exec npm run dev:start",
+    "tsc": "tsc -p tsconfig.build.json",
+    "tsc:dev": "tsc --sourceMap true -p tsconfig.build.json",
+    "test": "jest --detectOpenHandles",
+    "check-types": "tsc --noEmit -p tsconfig.build.json",
+    "lint-fix": "eslint --ext .js,.ts . --fix",
+    "lint": "eslint --ext .js,.ts ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyeros/ts-jest-error-import-from-index-export-example.git"
+  },
+  "keywords": [
+    "node",
+    "typescript"
+  ],
+  "author": "jyeros",
+  "license": "",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.16",
+    "@types/http-errors": "^1.6.3",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^12.12.28",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
+    "jest": "^25.1.0",
+    "jest-runner-groups": "^1.1.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.6.0",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-winston": "^4.0.3",
+    "http-errors": "^1.7.3",
+    "pug": "^2.0.4",
+    "winston": "^3.2.1",
+    "winston-elasticsearch": "^0.8.4"
+  }
+}
