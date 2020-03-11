@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, Method } from "axios"
 
-import { logger } from "../../loaders"
+import { logger } from "../../loaders/logger"
 
 const httpRequest = (options: AxiosRequestConfig) => async <U>(
   method: Method,
