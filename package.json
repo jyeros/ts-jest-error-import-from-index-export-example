@@ -58,7 +58,7 @@
     "express-async-errors": "^3.1.1",
     "express-winston": "^4.0.3",
     "http-errors": "^1.7.3",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "winston": "^3.2.1",
     "winston-elasticsearch": "^0.8.4"
   }
